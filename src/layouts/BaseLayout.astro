@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-const { title = "David Giorgi", description = "Personal site" } = Astro.props;
+const { title = "David Giorgi", description = "Personal site and identity hub" } = Astro.props;
 ---
 <html lang="en">
   <head>
@@ -8,22 +8,36 @@ const { title = "David Giorgi", description = "Personal site" } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{title}</title>
+
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   </head>
-  <body class="min-h-screen bg-white text-neutral-900 antialiased">
-    <header class="mx-auto max-w-4xl px-6 py-6 flex items-center justify-between">
-      <a href="/" class="font-semibold">DG</a>
-      <nav class="flex gap-6 text-sm">
-        <a href="/about">About</a>
-        <a href="/projects">Projects</a>
-        <a href="/journal">Journal</a>
-        <a href="/contact">Contact</a>
-      </nav>
+  <body class="font-sans">
+    <header class="border-b">
+      <div class="container max-w-4xl py-4 flex items-center justify-between">
+        <a href="/" class="font-extrabold text-lg">DG</a>
+        <nav class="flex gap-6 text-sm">
+          <a class="hover:opacity-70" href="/about">About</a>
+          <a class="hover:opacity-70" href="/projects">Projects</a>
+          <a class="hover:opacity-70" href="/journal">Journal</a>
+          <a class="hover:opacity-70" href="/contact">Contact</a>
+        </nav>
+      </div>
     </header>
-    <main class="mx-auto max-w-4xl px-6 py-10">
+
+    <main class="container max-w-4xl py-10">
       <slot />
     </main>
-    <footer class="mx-auto max-w-4xl px-6 py-10 text-sm text-neutral-500">
-      © {new Date().getFullYear()} David Giorgi
+
+    <footer class="border-t">
+      <div class="container max-w-4xl py-8 text-sm text-neutral-500">
+        © {new Date().getFullYear()} David Giorgi
+      </div>
     </footer>
   </body>
 </html>
+

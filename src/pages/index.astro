@@ -2,14 +2,32 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 <BaseLayout title="David Giorgi">
-  <section class="space-y-6">
-    <h1 class="text-3xl font-bold">David Giorgi</h1>
-    <p class="max-w-prose">Personal home and identity hub.</p>
+  <section class="space-y-8">
+    <div class="space-y-4">
+      <h1 class="text-4xl sm:text-5xl font-extrabold">David Giorgi</h1>
+      <p class="text-lg text-neutral-600 max-w-prose">
+        Personal home and identity hub. Photos, projects, journal.
+      </p>
+    </div>
+
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <a class="border rounded-xl p-4" href="https://photos.davidgiorgi.com">Photos</a>
-      <a class="border rounded-xl p-4" href="https://www.instagram.com/rawandrolling">Raw & Rolling</a>
-      <a class="border rounded-xl p-4" href="/projects">Projects</a>
-      <a class="border rounded-xl p-4" href="/journal">Journal</a>
+      <a class="rounded-2xl border p-5 no-underline hover:bg-neutral-50 transition" href="https://photos.davidgiorgi.com">
+        <div class="font-semibold">Photos</div>
+        <div class="text-sm text-neutral-600">Immich gallery</div>
+      </a>
+      <a class="rounded-2xl border p-5 no-underline hover:bg-neutral-50 transition" href="https://www.instagram.com/rawandrolling">
+        <div class="font-semibold">Raw and Rolling</div>
+        <div class="text-sm text-neutral-600">Daily life archive</div>
+      </a>
+      <a class="rounded-2xl border p-5 no-underline hover:bg-neutral-50 transition" href="/projects">
+        <div class="font-semibold">Projects</div>
+        <div class="text-sm text-neutral-600">Things I am building</div>
+      </a>
+      <a class="rounded-2xl border p-5 no-underline hover:bg-neutral-50 transition" href="/journal">
+        <div class="font-semibold">Journal</div>
+        <div class="text-sm text-neutral-600">Notes and entries</div>
+      </a>
     </div>
   </section>
 </BaseLayout>
+
